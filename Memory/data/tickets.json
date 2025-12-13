@@ -1,0 +1,214 @@
+{
+  "293445": {
+    "status": "In Progress",
+    "issue": "Frequent disconnection at night",
+    "description": "Internet disconnects every 20\u00e2\u20ac\u201c30 minutes after 10 PM. Customer has restarted router twice with no improvement.",
+    "device": "Archer-X600",
+    "priority": "High",
+    "created_at": "2025-02-10",
+    "last_updated": "2025-02-12",
+    "customer_name": "Varsha",
+    "notes": [
+      {
+        "timestamp": "2025-02-11T11:20:00",
+        "author": "support_agent",
+        "text": "Suggested router power cycle and checked SNR logs."
+      },
+      {
+        "timestamp": "2025-02-12T15:10:00",
+        "author": "technician",
+        "text": "Detected packet loss spikes between 10 PM and 1 AM in backend monitoring."
+      }
+    ]
+  },
+  "882122": {
+    "status": "Awaiting Customer Response",
+    "issue": "Billing discrepancy for February invoice",
+    "description": "Customer claims extra \u00e2\u201a\u00b9450 was charged without usage change.",
+    "device": "-",
+    "priority": "Medium",
+    "created_at": "2025-02-01",
+    "last_updated": "2025-02-05",
+    "customer_name": "Anil",
+    "notes": [
+      {
+        "timestamp": "2025-02-05T14:50:00",
+        "author": "billing_team",
+        "text": "Requested previous invoice copy for validation."
+      }
+    ]
+  },
+  "110022": {
+    "status": "Closed - Resolved",
+    "issue": "Internet speed lower than promised",
+    "description": "Speed test reports 50 Mbps while plan provides 100 Mbps.",
+    "device": "Router-XZ100",
+    "priority": "Low",
+    "created_at": "2025-01-15",
+    "last_updated": "2025-01-18",
+    "customer_name": "Priya",
+    "notes": [
+      {
+        "timestamp": "2025-01-18T09:30:00",
+        "author": "support_agent",
+        "text": "Plan upgraded to 150 Mbps with goodwill credit. Issue resolved."
+      }
+    ]
+  },
+  "765321": {
+    "status": "Escalated to Level 2",
+    "issue": "Modem reboots every few minutes",
+    "description": "Connection drops and modem restarts automatically every 5\u00e2\u20ac\u201c8 minutes.",
+    "device": "Archer-A900",
+    "priority": "Critical",
+    "created_at": "2025-02-08",
+    "last_updated": "2025-02-12",
+    "customer_name": "Rahul",
+    "notes": [
+      {
+        "timestamp": "2025-02-12T10:00:00",
+        "author": "level1_support",
+        "text": "Suspected overheating or power supply failure."
+      }
+    ]
+  },
+  "553210": {
+    "status": "Technician Visit Scheduled",
+    "issue": "No connectivity since morning",
+    "description": "Internet down since 7 AM. Router reset did not help.",
+    "device": "Router-XZ100",
+    "priority": "High",
+    "created_at": "2025-02-11",
+    "last_updated": "2025-02-13",
+    "customer_name": "Neha",
+    "notes": [
+      {
+        "timestamp": "2025-02-13T09:45:00",
+        "author": "dispatch_team",
+        "text": "Field technician scheduled for Feb 14 at 11 AM."
+      }
+    ]
+  },
+  "998877": {
+    "status": "In Progress",
+    "issue": "Wi-Fi range very weak in bedroom",
+    "description": "Signal strength drops when more than 10 meters from the router.",
+    "device": "Mesh-Pro M200",
+    "priority": "Medium",
+    "created_at": "2025-02-09",
+    "last_updated": "2025-02-10",
+    "customer_name": "Arjun",
+    "notes": [
+      {
+        "timestamp": "2025-02-10T17:35:00",
+        "author": "support_agent",
+        "text": "Recommended repositioning router and checking interference."
+      }
+    ]
+  },
+  "120450": {
+    "status": "Diagnostics Running",
+    "issue": "Random packet loss during video calls",
+    "description": "Customer reports jitter and packet loss on Zoom calls.",
+    "device": "Optic-Fiber-ONT",
+    "priority": "Medium",
+    "created_at": "2025-02-02",
+    "last_updated": "2025-02-04",
+    "customer_name": "Sanjana",
+    "notes": [
+      {
+        "timestamp": "2025-02-04T16:10:00",
+        "author": "network_ops",
+        "text": "Investigating node congestion at peak hours."
+      }
+    ]
+  },
+  "777311": {
+    "status": "Pending Installation Team",
+    "issue": "New connection request",
+    "description": "Requested 300 Mbps fiber connection.",
+    "device": "-",
+    "priority": "Low",
+    "created_at": "2025-02-01",
+    "last_updated": "2025-02-10",
+    "customer_name": "Meera",
+    "notes": [
+      {
+        "timestamp": "2025-02-10T10:30:00",
+        "author": "installation_team",
+        "text": "Waiting for pole clearance approval."
+      }
+    ]
+  },
+  "654233": {
+    "status": "Payment Under Verification",
+    "issue": "Recharge payment success not reflected",
+    "description": "Payment completed via UPI but plan did not activate.",
+    "device": "-",
+    "priority": "Medium",
+    "created_at": "2025-02-12",
+    "last_updated": "2025-02-12",
+    "customer_name": "Deepak",
+    "notes": [
+      {
+        "timestamp": "2025-02-12T14:05:00",
+        "author": "billing_team",
+        "text": "Payment gateway logs inconsistencies detected."
+      }
+    ]
+  },
+  "871290": {
+    "status": "Escalated to NOC",
+    "issue": "Severe fiber cut in locality",
+    "description": "Multiple customers affected. Expected resolution 48 hours.",
+    "device": "Fiber Line",
+    "priority": "Critical",
+    "created_at": "2025-02-11",
+    "last_updated": "2025-02-11",
+    "customer_name": "Rohit",
+    "notes": [
+      {
+        "timestamp": "2025-02-11T21:00:00",
+        "author": "noc_team",
+        "text": "Damage reported due to construction dig. Field team dispatched."
+      }
+    ]
+  },
+  "998883": {
+    "status": "In Progress",
+    "issue": "WiFi dead zones at home; no internet coverage in bedroom and kitchen.",
+    "description": "WiFi dead zones at home; no internet coverage in bedroom and kitchen. Device: Netgear Nighthawk R7000",
+    "device": "Netgear Nighthawk R7000",
+    "priority": "High",
+    "created_at": "2025-12-13",
+    "last_updated": "2025-12-14",
+    "customer_name": "Varsha",
+    "notes": [
+      {
+        "timestamp": "2025-12-13T14:03:27.039285",
+        "author": "customer",
+        "text": "WiFi dead zones at home; no internet coverage in bedroom and kitchen."
+      },
+      {
+        "timestamp": "2025-12-13T14:03:33.860348",
+        "author": "customer",
+        "text": "Customer reports they have already tried moving the router to different locations, but the WiFi signal is still weak in bedroom and kitchen."
+      },
+      {
+        "timestamp": "2025-12-13T14:03:44.499147",
+        "author": "customer",
+        "text": "Customer provided additional details: Router model is Netgear Nighthawk R7000, home is a 2-story house with router on the ground floor."
+      },
+      {
+        "timestamp": "2025-12-13T16:30:00",
+        "author": "support_agent",
+        "text": "Ticket reviewed. Issue escalated to High priority due to multiple room coverage problems. Recommended mesh system or WiFi extenders for 2-story home."
+      },
+      {
+        "timestamp": "2025-12-14T09:15:00",
+        "author": "technical_team",
+        "text": "Analyzed router placement recommendations. For Netgear Nighthawk R7000 in 2-story home, suggest: 1) Reposition router to central location on ground floor, 2) Use 2.4 GHz band for better range, 3) Consider mesh system if issue persists."
+      }
+    ]
+  }
+}

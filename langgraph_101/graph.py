@@ -59,6 +59,9 @@ graph.add_edge("reply", END)
 # Compile the graph
 runnable = graph.compile()
 
+# Generate and save graph diagram
+runnable.get_graph().draw_mermaid_png(output_file_path="graph.png")
+
 
 if __name__ == "__main__":
     # Example queries
