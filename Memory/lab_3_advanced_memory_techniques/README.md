@@ -6,8 +6,10 @@ A CRM support agent with semantic, episodic, preference, and procedural memory s
 
 ### Graph Flow
 ```
-semantic_read → episodic_read → preference_read → planner → tool → conflict_resolution → respond → salience_gated_memory_write
+semantic_read → episodic_read → preference_read → planner → procedural_guard → tool → conflict_resolution → respond → salience_gated_memory_write
 ```
+
+Planner selects the procedure. Procedural guard enforces procedure rules by selecting the tool from allowed_tools and extracting arguments.
 
 ### Memory Types
 - **Semantic Memory**: Facts (ticket IDs, devices, customer info) - vector store with deterministic keys
@@ -24,12 +26,12 @@ lab_3_advanced_memory_techniques/
 │   ├── semantic_read.py        # Reads semantic memories
 │   ├── episodic_read.py        # Reads episodic memories
 │   ├── preference_read.py      # Reads user preferences
-│   ├── planner.py              # Selects procedure, tool, extracts arguments
+│   ├── planner.py              # Selects procedure based on user query
+│   ├── procedural_guard.py    # Enforces procedure rules: selects tool, extracts arguments
 │   ├── tool_node.py            # Executes tools (create/update/lookup ticket)
 │   ├── conflict_resolution.py  # Resolves conflicts between tool output and memories
 │   ├── response.py             # Generates natural language response
-│   ├── salience_gated_memory_write.py  # Writes to memory based on salience scores
-│   └── procedural_guard.py    # Reference: procedural context and escalation (not used)
+│   └── salience_gated_memory_write.py  # Writes to memory based on salience scores
 ├── memory_stores/              # Memory implementations
 │   ├── semantic_memory.py      # Vector store for facts
 │   ├── episodic_memory.py      # Vector store for experiences
@@ -45,10 +47,17 @@ lab_3_advanced_memory_techniques/
 ## Key Components
 
 ### Planner Node
-- Selects procedure (standard_support, quick_resolution, escalated_support)
-- Chooses tool from procedure's allowed_tools
-- Extracts arguments from conversation and memories
+- Selects procedure (standard_support, quick_resolution, escalated_support) based on user query and context
 - Uses semantic and episodic memories to make decisions
+- Returns selected procedure for procedural guard
+
+### Procedural Guard Node
+- Takes selected procedure from planner
+- Enforces procedure rules by selecting tool from procedure's allowed_tools
+- Extracts arguments from conversation history and semantic/episodic memories
+- Validates selected tool is in procedure's allowed_tools list
+- Adds procedural context (steps, tool rules) to messages
+- Handles escalation detection from previous tool execution
 
 ### Salience-Gated Memory Write
 - Computes importance, novelty, contradiction, and risk scores
@@ -76,9 +85,11 @@ lab_3_advanced_memory_techniques/
 - Add automatic preference detection from conversation patterns
 
 ### Procedural Guard
-- Integrate after planner for procedural context injection
-- Or integrate after tool for escalation detection
-- Use for automatic procedure switching based on ticket conditions
+- Currently integrated after planner in the graph
+- Enforces procedure rules: selects tool from allowed_tools and extracts arguments
+- Adds procedure-specific context (steps, tool rules) to messages for downstream nodes
+- Detects escalations based on ticket status/priority from previous tool execution
+- Can automatically switch to escalated_support procedure when escalation conditions are met
 
 ### Enhancements
 - Add preference-based routing in planner
@@ -91,7 +102,7 @@ lab_3_advanced_memory_techniques/
 1. **Memory Keys**: Use deterministic keys for semantic memory (e.g., `ticket_{ticket_id}`) to enable overwrite
 2. **Salience Threshold**: Adjust threshold (default 0.6) based on use case - lower for more memories, higher for quality
 3. **Memory Limits**: Limit semantic/episodic memories in prompts (currently 5) to avoid token limits. Summarize to avoid context/prompt exploding.
-4. **Tool Arguments**: Ensure planner extracts all required arguments - check tool definitions
+4. **Tool Arguments**: Ensure procedural guard extracts all required arguments - check tool definitions
 5. **Conflict Resolution**: Tool output always wins - design tools to return authoritative data
 6. **Namespace**: Use unique namespaces per user/customer for memory isolation
 
