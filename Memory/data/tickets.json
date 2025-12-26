@@ -210,5 +210,74 @@
         "text": "Analyzed router placement recommendations. For Netgear Nighthawk R7000 in 2-story home, suggest: 1) Reposition router to central location on ground floor, 2) Use 2.4 GHz band for better range, 3) Consider mesh system if issue persists."
       }
     ]
+  },
+  "998884": {
+    "status": "New",
+    "issue": "slow internet speeds",
+    "description": "slow internet speeds",
+    "device": "-",
+    "priority": "Medium",
+    "created_at": "2025-12-26",
+    "last_updated": "2025-12-26",
+    "customer_name": "Cody",
+    "notes": [
+      {
+        "timestamp": "2025-12-26T13:45:27.308766+00:00",
+        "author": "customer",
+        "text": "slow internet speeds"
+      },
+      {
+        "timestamp": "2025-12-26T13:45:42.467150+00:00",
+        "author": "customer",
+        "text": "Customer tried restarting modem and router multiple times, but speeds are still slow."
+      },
+      {
+        "timestamp": "2025-12-26T13:46:00.386648+00:00",
+        "author": "customer",
+        "text": "Customer has a 500 Mbps plan but is only getting around 50 Mbps. Modem is a Netgear CM1000 and router is a TP-Link Archer AX50. This started happening about 3 days ago."
+      },
+      {
+        "timestamp": "2025-12-26T13:46:24.116618+00:00",
+        "author": "customer",
+        "text": "Customer has a 500 Mbps plan but is only getting around 50 Mbps. Modem is a Netgear CM1000 and router is a TP-Link Archer AX50. This started happening about 3 days ago."
+      }
+    ]
+  },
+  "998888": {
+    "status": "New",
+    "issue": "slow internet speeds",
+    "description": "slow internet speeds",
+    "device": "-",
+    "priority": "Medium",
+    "created_at": "2025-12-26",
+    "last_updated": "2025-12-26",
+    "customer_name": "Cody",
+    "notes": [
+      {
+        "timestamp": "2025-12-26T14:32:43.341200+00:00",
+        "author": "customer",
+        "text": "slow internet speeds"
+      },
+      {
+        "timestamp": "2025-12-26T14:33:05.939218+00:00",
+        "author": "customer",
+        "text": "Customer tried restarting modem and router multiple times, but speeds are still slow."
+      },
+      {
+        "timestamp": "2025-12-26T14:33:29.368873+00:00",
+        "author": "customer",
+        "text": "Customer has a 500 Mbps plan but is only getting around 50 Mbps. Modem is a Netgear CM1000 and router is a TP-Link Archer AX50. This started happening about 3 days ago."
+      },
+      {
+        "timestamp": "2025-12-26T14:34:48.304078+00:00",
+        "author": "customer",
+        "text": "Customer is looking for additional troubleshooting steps for slow internet speeds."
+      },
+      {
+        "timestamp": "2025-12-26T14:39:48.694502+00:00",
+        "author": "customer",
+        "text": "Customer corrected the router model to a Netgear Nighthawk."
+      }
+    ]
   }
 }
